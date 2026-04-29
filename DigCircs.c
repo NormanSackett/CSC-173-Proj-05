@@ -328,7 +328,7 @@ void test_circuit(Circuit c, char* inputs, char* outputs) {
             Circuit_setInput(c, j, truth_val);
             printf("%d\t", truth_val);
         }
-
+        printf("|");
         Circuit_update(c);
         for (int j = 0; j < Circuit_numOutputs(c); j++) {
             printf("\t%s", Boolean_toString(Circuit_getOutput(c, j)));
